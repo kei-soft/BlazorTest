@@ -1,5 +1,7 @@
 using BlazorTest.Components;
 
+using BlzaorTest.SharedPages.Pages;
+
 namespace BlazorTest;
 
 public class Program
@@ -28,7 +30,8 @@ public class Program
 
         app.MapStaticAssets();
         app.MapRazorComponents<App>()
-            .AddInteractiveServerRenderMode();
+            .AddInteractiveServerRenderMode()
+            .AddAdditionalAssemblies(typeof(TestPage).Assembly);
 
         app.Run();
     }
