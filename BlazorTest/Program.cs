@@ -31,7 +31,7 @@ public class Program
         app.MapStaticAssets();
         app.MapRazorComponents<App>()
             .AddInteractiveServerRenderMode()
-            .AddAdditionalAssemblies(typeof(TestPage).Assembly);
+            .AddAdditionalAssemblies(typeof(TestPage).Assembly); // Ãß°¡
 
         app.Run();
     }
